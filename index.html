@@ -1,31 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ad Landing Page</title>
+
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11125227417">
-  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11125227417"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'AW-11125227417');
   </script>
-  <!-- Event snippet for Outbound click conversion page -->
-  <script>
-    gtag('event', 'conversion', {
-      'send_to': 'AW-11125227417/nCcVCPz24ckaEJn_9bgp',
-      'value': 1.0,
-      'currency': 'INR'
-    });
-  </script>
-  <title>Ad Landing Page</title>
+
   <style>
-    html,
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -41,17 +31,27 @@
     }
   </style>
 </head>
-
 <body>
   <img src="https://i.postimg.cc/y6jvmKDD/18may.png" alt="Click to chat on WhatsApp" id="whatsapp-image" />
 
   <script>
     document.getElementById("whatsapp-image").addEventListener("click", function () {
+      // Track the conversion on click
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11125227417/nCcVCPz24ckaEJn_9bgp',
+        'value': 1.0,
+        'currency': 'INR'
+      });
+
+      // Open WhatsApp chat
       const phoneNumber = "9568561567";
       const message = encodeURIComponent("Hi, I want Cricket ID.");
-      window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
+
+      // Delay redirect slightly to ensure event fires
+      setTimeout(() => {
+        window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
+      }, 300);
     });
   </script>
 </body>
-
 </html>
