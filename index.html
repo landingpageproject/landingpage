@@ -5,40 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ad Landing Page</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .container {
-      text-align: center;
-      padding: 20px;
+      padding: 0;
+      height: 100%;
+      background: #000;
     }
 
     img {
       width: 100%;
-      max-width: 400px;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      display: block;
       cursor: pointer;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-
-    img:hover {
-      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://i.postimg.cc/NMqWpNJ6/18may.jpg" alt="Click to chat on WhatsApp" id="whatsapp-image" />
-  </div>
+  <img src="https://i.postimg.cc/NMqWpNJ6/18may.jpg" alt="Click to chat on WhatsApp" id="whatsapp-image" />
 
   <script>
     document.getElementById("whatsapp-image").addEventListener("click", function() {
